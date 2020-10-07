@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://nadavro1:nadavro1@cluster0.p6kdw.mongodb.net/massegingsys?retryWrites=true&w=majority"
+    ,"jwtSecret": "Nadav-Token"
+  }

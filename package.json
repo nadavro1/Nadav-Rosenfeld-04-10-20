@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://nadavro1.github.io/Nadav-Rosenfeld-04-10-20/",
   "scripts": {
     "start": "nodemon --exec node index.js",
     "server": "nodemon server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
@@ -16,6 +19,7 @@
     "config": "^3.3.1",
     "express": "^4.17.1",
     "express-validator": "^6.5.0",
+    "gh-pages": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.18",
     "nodemon": "^2.0.4"

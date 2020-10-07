@@ -18,7 +18,7 @@ route.post('/', [auth,[
                 return res.status(400).json({errors: errors.array()});
             }
             const {to}=req.body;
-            let receiver= await User.findOne({email: to});
+            let receiver= await User.findOne({email: { $regex : new RegExp(to, "i") }});//find the email with case insensitive
             if (!receiver) {
                 return res.status(400).json({errors: [{msg: "Email receiver doesnt exist"}]})
             }

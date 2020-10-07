@@ -14,6 +14,7 @@ app.use('/api/messages',require('./Routes/API/messages'));
 app.use('/api/auth',require('./Routes/API/auth'));
 
 if(process.env.NODE_ENV === 'production'){
+    console.log("using production")
     //set static folder
     app.use(express.static('client/build'))
 

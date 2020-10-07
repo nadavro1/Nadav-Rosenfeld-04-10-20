@@ -9,10 +9,10 @@ connectDB();
 app.use(express.json({extended:false}));
 
 
-app.use('/api/users',require('./Routes/API/users'));
-app.use('/api/messages',require('./Routes/API/messages'));
-app.use('/api/auth',require('./Routes/API/auth'));
-
+// app.use('/api/users',require('./Routes/API/users'));
+// app.use('/api/messages',require('./Routes/API/messages'));
+// app.use('/api/auth',require('./Routes/API/auth'));
+console.log("test")
 if(process.env.NODE_ENV === 'production'){
     console.log("using production")
     //set static folder
